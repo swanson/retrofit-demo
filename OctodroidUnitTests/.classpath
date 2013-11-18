@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Octodroid"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/Users/matt/Desktop/adt-bundle-mac-x86_64-20131030/sdk/platforms/android-19/android.jar"/>
+	<classpathentry kind="lib" path="lib/robolectric-2.2-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="lib/mockito-all-1.9.5.jar"/>
+	<classpathentry kind="lib" path="lib/fest-assert-core-2.0M10.jar"/>
+	<classpathentry kind="lib" path="lib/fest-android-1.0.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
