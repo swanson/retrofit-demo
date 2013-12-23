@@ -73,11 +73,11 @@ public class MainActivityTest {
     
     @Test
     public void shouldToastIfApiError() throws Exception {
-    	Mockito.verify(mockApi).repositories(Mockito.anyString(), cb.capture());
-    	
-    	cb.getValue().failure(null);
-    	
-    	assertThat(ShadowToast.getTextOfLatestToast()).contains("Failed");
+        Mockito.verify(mockApi).repositories(Mockito.anyString(), cb.capture());
+        
+        cb.getValue().failure(null);
+        
+        assertThat(ShadowToast.getTextOfLatestToast()).contains("Failed");
     }
 
 }
