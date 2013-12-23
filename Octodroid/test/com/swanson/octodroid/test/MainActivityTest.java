@@ -27,7 +27,7 @@ import static org.fest.assertions.api.ANDROID.assertThat;
 @RunWith(CustomTestRunner.class)
 public class MainActivityTest {
 
-	private MainActivity activity;
+    private MainActivity activity;
 
 	@Mock
 	private GitHub mockApi;
