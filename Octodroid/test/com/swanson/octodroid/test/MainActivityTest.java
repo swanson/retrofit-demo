@@ -28,23 +28,23 @@ import static org.fest.assertions.api.ANDROID.assertThat;
 public class MainActivityTest {
 
     private MainActivity activity;
-
-	@Mock
-	private GitHub mockApi;
-
-	@Captor
-	private ArgumentCaptor<Callback<List<Repository>>> cb;
-	
-	@Before
-	public void setUp() {
-		MockitoAnnotations.initMocks(this);
-		
-		ActivityController<MainActivity> controller = Robolectric.buildActivity(MainActivity.class);
-		activity = controller.get();
-		activity.setApi(mockApi);
-		
-		controller.create();
-	}
+    
+    @Mock
+    private GitHub mockApi;
+    
+    @Captor
+    private ArgumentCaptor<Callback<List<Repository>>> cb;
+    
+    @Before
+    public void setUp() {
+	    MockitoAnnotations.initMocks(this);
+        
+        ActivityController<MainActivity> controller = Robolectric.buildActivity(MainActivity.class);
+        activity = controller.get();
+        activity.setApi(mockApi);
+        
+	    controller.create();
+    }
 	
     @Test
     public void shouldFillAdapterWithReposFromApi() throws Exception {
