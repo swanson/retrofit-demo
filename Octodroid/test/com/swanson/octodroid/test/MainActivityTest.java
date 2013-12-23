@@ -61,14 +61,14 @@ public class MainActivityTest {
     
     @Test
     public void shouldToastSadMessageIfNoRepos() throws Exception {
-    	Mockito.verify(mockApi).repositories(Mockito.anyString(), cb.capture());
-    	
-    	List<Repository> noRepos = new ArrayList<Repository>();
-    	
-    	cb.getValue().success(noRepos, null);
-    	
-    	assertThat(ShadowToast.getTextOfLatestToast()).contains("No repos :(");
-    	assertThat(activity.getListAdapter()).isEmpty();
+        Mockito.verify(mockApi).repositories(Mockito.anyString(), cb.capture());
+        
+        List<Repository> noRepos = new ArrayList<Repository>();
+        
+        cb.getValue().success(noRepos, null);
+        
+        assertThat(ShadowToast.getTextOfLatestToast()).contains("No repos :(");
+        assertThat(activity.getListAdapter()).isEmpty();
     }
     
     @Test
