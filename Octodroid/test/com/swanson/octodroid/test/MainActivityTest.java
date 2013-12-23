@@ -37,13 +37,13 @@ public class MainActivityTest {
     
     @Before
     public void setUp() {
-    	MockitoAnnotations.initMocks(this);
+        MockitoAnnotations.initMocks(this);
         
         ActivityController<MainActivity> controller = Robolectric.buildActivity(MainActivity.class);
         activity = controller.get();
         activity.setApi(mockApi);
         
-    	controller.create();
+        controller.create();
     }
 	
     @Test
