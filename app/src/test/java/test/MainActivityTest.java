@@ -1,6 +1,9 @@
-package com.swanson.octodroid.test;
-import java.util.ArrayList;
-import java.util.List;
+package test;
+
+import com.swanson.octodroid.GitHub;
+import com.swanson.octodroid.MainActivity;
+import com.swanson.octodroid.Owner;
+import com.swanson.octodroid.Repository;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,15 +17,10 @@ import org.robolectric.Robolectric;
 import org.robolectric.shadows.ShadowToast;
 import org.robolectric.util.ActivityController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import retrofit.Callback;
-
-import com.swanson.octodroid.GitHub;
-import com.swanson.octodroid.MainActivity;
-import com.swanson.octodroid.Owner;
-import com.swanson.octodroid.Repository;
-
-import static org.fest.assertions.api.Assertions.assertThat; 
-import static org.fest.assertions.api.ANDROID.assertThat; 
 
 @RunWith(CustomTestRunner.class)
 public class MainActivityTest {
@@ -58,7 +56,7 @@ public class MainActivityTest {
         
         assertThat(activity.getListAdapter()).hasCount(2);
     }
-    
+
     @Test
     public void shouldToastSadMessageIfNoRepos() throws Exception {
         Mockito.verify(mockApi).repositories(Mockito.anyString(), cb.capture());
