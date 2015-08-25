@@ -22,6 +22,8 @@ import java.util.List;
 
 import retrofit.Callback;
 
+import static org.fest.assertions.api.ANDROID.assertThat;
+
 @RunWith(CustomTestRunner.class)
 public class MainActivityTest {
 
